@@ -5,7 +5,6 @@ cp mapper.py /mapreduce
 cp reducer.py /mapreduce
 hdfs dfs -mkdir /mapreduce
 hdfs dfs -copyFromLocal test.txt /mapreduce
-
 cd /mapreduce
 /usr/bin/hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
     -files mapper.py,reducer.py \
