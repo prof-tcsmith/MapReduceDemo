@@ -9,19 +9,11 @@
 ```bash
 cd ~ 
 mkdir mapreduce
-``
-
-* create python2.7 environmnet
-
-```bash
-conda create -n py27 python=2.7
-```  
-
-* switch to python2.7 environment
-
-```bash
-conda activate py27
 ```
+
+* create python2.7 environmnet ```conda create -n py27 python=2.7```
+
+* switch to python2.7 environment ```conda activate py27```
 
 ---
 
@@ -58,9 +50,7 @@ for line in sys.stdin: # look through data that is piped into this program
 
 * start a terminal in the local folder. This can be done within vscode by pressing `ctrl+``, or starting the terminal program and navigating to the folder.
 
-* Change permissions of mapper.py to executable. 
-  
-`chmod +x mapper.py`
+* Change permissions of mapper.py to executable `chmod +x mapper.py`
 
 * Test mapper.py by running `cat test.txt | ./mapper.py`. This should produce a list of words and the number 1 for each word.
 
