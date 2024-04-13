@@ -7,31 +7,8 @@
 *  log in to the CyberHub VM
 *  Change directory to Workspace 'cd ~/Workspace`
 *  Clone the MapReduceDemo repo `git clone https://github.com/prof-tcsmith/MapReduceDemo.git`
-*  Copy reducer.py, mapper.py, test.txt, and run-mr-job.sh to the Cloudera container shared folder
-```bash
-cp -p reducer.py ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
-cp -p mapper.py ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
-cp -p test.txt ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
-cp -p run-mr-job.sh ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
-```
-* Run the run-mr-job.sh script `./run-mr-job.sh`
-> NOTE: This script contains the following code
-> ```bash
-> #!/usr/bin/env bash
-> mkdir /mapreduce
-> chmod 777 /mapreduce
-> cp mapper.py /mapreduce
-> cp reducer.py /mapreduce
-> hdfs dfs -mkdir /mapreduce
-> hdfs dfs -copyFromLocal test.txt /mapreduce
-> cd /mapreduce
-> /usr/bin/hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
->    -files mapper.py,reducer.py \
->    -input /mapreduce/test.txt \
->    -output /mapreduce/output01 \
->    -mapper mapper.py \
->    -reducer reducer.py
-> ```
+*  Change persmissions on run-mr-job.sh to 777
+*  Run the run-mr-job.sh script `./run-mr-job.sh`
   
 After running, you will see something the following output.
 
