@@ -124,7 +124,7 @@ cp -p run-mr-job.sh ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
     -output /mapreduce/output01 \
     -mapper mapper.py \
     -reducer reducer.py
-```
+> ```
   
 After running, you will see something the following output.
 
