@@ -119,11 +119,11 @@ cp -p run-mr-job.sh ~/Workspace/bd24-STUDENT/Cloudera/shared-folder
 > hdfs dfs -copyFromLocal test.txt /mapreduce
 > cd /mapreduce
 > /usr/bin/hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
-    -files mapper.py,reducer.py \
-    -input /mapreduce/test.txt \
-    -output /mapreduce/output01 \
-    -mapper mapper.py \
-    -reducer reducer.py
+>    -files mapper.py,reducer.py \
+>    -input /mapreduce/test.txt \
+>    -output /mapreduce/output01 \
+>    -mapper mapper.py \
+>    -reducer reducer.py
 > ```
   
 After running, you will see something the following output.
